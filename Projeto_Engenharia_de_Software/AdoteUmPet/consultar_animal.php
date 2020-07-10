@@ -16,12 +16,24 @@ $sql = "SELECT * FROM animais WHERE id LIKE '".$pesquisar."'";
 $result = mysqli_query($conn, $sql);
 ?>
 <hmlt>
-    <head>  
-        <meta charset ="utf8">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="shortcut icon" href="https://demo.learncodeweb.com/favicon.ico">
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" type="text/css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+      <?php require "sidebar.php"; ?>
     </head>
     <body>
-        <table border="1">
-            <tr>
+      <div class="container">
+    		<h1><a href="https://learncodeweb.com/php/php-crud-in-bootstrap-4-with-search-functionality/"></a></h1>
+    		<div class="card">
+    			<div class="card-body">
+    		</div>
+        <table class="table table-striped table-bordered">
+  				<thead>
+  					<tr class="bg-primary text-white">
                 <td>ID</td>
                 <td>Nome</td>
                 <td>Porte</td>
@@ -30,7 +42,7 @@ $result = mysqli_query($conn, $sql);
                 <td>Ação</td>
                 <td>
             </tr>
-            <?php 
+            <?php
                 if ($result->num_rows > 0){
                 while($dado = $result->fetch_array()){ ?>
             <tr>
@@ -47,10 +59,21 @@ $result = mysqli_query($conn, $sql);
                     echo "Animal não encontrado";
                 }
             ?>
-            <form  action="consultar_animalForms.php">
-                <input type="submit" value="Voltar"><br><br>
-            </form>
         </table>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        	<script src="https://cdn.jsdelivr.net/jquery.caret/0.1/jquery.caret.js"></script>
+        <script src="https://www.solodev.com/_/assets/phone/jquery.mobilePhoneNumber.js"></script>
+        	<script
+          src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+          integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+          crossorigin="anonymous"></script>
+            <script>
+        	</script>
+        	<form action="tela_admin.php">
+        	    <input type="submit" value="Voltar">
+        	</form>
+        </html>
     </body>
 </hmlt>
-

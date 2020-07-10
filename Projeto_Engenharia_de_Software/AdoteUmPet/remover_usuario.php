@@ -11,16 +11,15 @@ if(!$conn){
     die("Connection Failed". mysqli_connect_error());
 }
 
-$pesquisar = $_POST["pesquisar"];
 $sql = "DELETE FROM usuarios WHERE cpf='$_GET[cpf]'";
 if(mysqli_query($conn, $sql)){
-    echo "Removido com sucesso";
+    echo "Usuario removido com sucesso!";
 }
 else{
     echo "Não deletado";
 }
 
 ?>
-<form action="consultar_usuario.php">
-    <input type="submit" value="Pesquisar novamente">
+<form action="browse-users.php">
+    <input type="submit" value="Voltar">
 </form>

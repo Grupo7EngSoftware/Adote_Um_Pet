@@ -24,10 +24,10 @@ if(!$result){
     echo"houve um erro";
 }
 else{
-    echo"Cadastrado com sucesso";
+    echo"Cadastrado foi realizado sucesso";
 }
 
-?> 
-<form action="index.php">
+?>
+<form action="listar_usuarios.php">
     <input type="submit" value="Voltar">
 </form>
