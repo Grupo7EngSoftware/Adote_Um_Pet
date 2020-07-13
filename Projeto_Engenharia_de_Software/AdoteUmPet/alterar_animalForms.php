@@ -1,5 +1,6 @@
 <html>
     <head>
+    <?php require "sidebar.php"; ?>
         <meta charset="UTF-8">
         <title>Alterar</title>
         <link rel="styleshhet" href="estilo/estilo.css"/>
@@ -24,6 +25,6 @@
         </div>
     </body>
 </html>
-<form action="consultar_animalForms.php">
-    <input type="submit" value="Pesquisar novamente">
+<form action="tela_admin.php">
+    <input type="submit" value="Voltar">
 </form>

@@ -11,9 +11,9 @@ if(!$conn){
     die("Connection Failed". mysqli_connect_error());
 }
 
-$sql = "DELETE FROM prontuario WHERE porte='$_GET[porte]'";
+$sql = "DELETE FROM doacao WHERE cpf='$_GET[cpf]'";
 if(mysqli_query($conn, $sql)){
-    echo "Prontuario removido com sucesso!";
+    echo "Doação removida com sucesso!";
 }
 else{
     echo "Não deletado";

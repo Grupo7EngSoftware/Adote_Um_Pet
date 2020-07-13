@@ -11,15 +11,17 @@ if(!$conn){
     die("Connection Failed". mysqli_connect_error());
 }
 
-$sql = "DELETE FROM prontuario WHERE porte='$_GET[porte]'";
+
+$sql = "DELETE FROM patrocinio WHERE cnpj='$_GET[cnpj]'";
 if(mysqli_query($conn, $sql)){
-    echo "Prontuario removido com sucesso!";
+    echo "Removido com sucesso";
 }
 else{
     echo "Não deletado";
 }
 
 ?>
-<form action="tela_admin.php">
-    <input type="submit" value="Voltar">
+
+<form action="consultar_patrocinioForm.php">
+    <input type="submit" value="Pesquisar novamente">
 </form>

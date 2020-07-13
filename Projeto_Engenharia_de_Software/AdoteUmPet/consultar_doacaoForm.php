@@ -5,9 +5,9 @@
 </head>
 <body>
   <div>
-    <h1>Pesquisar Prontuarios</h1>
-    <form method="POST" action="consultar_prontuario.php">
-        Porte:<input type="text" name="pesquisar" placeholder="Digite o porte">
+    <h1>Pesquisar Doação</h1>
+    <form method="POST" action="consultar_doacao.php">
+        Pesquisar:<input type="text" name="pesquisar" placeholder="Digite o CPF">
         <input type="submit" value="ENVIAR">
     </form>
   </div>

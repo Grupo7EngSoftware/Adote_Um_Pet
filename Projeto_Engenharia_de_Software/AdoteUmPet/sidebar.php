@@ -39,8 +39,8 @@
               </ul>
 	          </li>
             <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Prontuarios</a>
-              <ul class="collapse list-unstyled" id="pageSubmenu">
+              <a href="#page2Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Prontuarios</a>
+              <ul class="collapse list-unstyled" id="page2Submenu">
                 <li>
                     <a href="listar_prontuario.php">Listar Prontuarios</a>
                 </li>
@@ -50,13 +50,37 @@
               </ul>
 	          </li>
             <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Doações</a>
-              <ul class="collapse list-unstyled" id="pageSubmenu">
+              <a href="#page3Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Doações</a>
+              <ul class="collapse list-unstyled" id="page3Submenu">
                 <li>
                     <a href="listar_doacao.php">Listar Doações</a>
                 </li>
+                <li>
+                    <a href="consultar_doacaoForm.php">Consultar uma doação</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#page4Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Agenda</a>
+              <ul class="collapse list-unstyled" id="page4Submenu">
+                <li>
+                    <a href="fullcalendar/">Exibir Calendário</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#page5Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Patrocínio</a>
+              <ul class="collapse list-unstyled" id="page5Submenu">
+                <li>
+                    <a href="listar_patrocinio.php">Listar patrocínios</a>
+                </li>
+                <li>
+                    <a href="consultar_patrocinioForm.php">Consultar patrocínios</a>
+                </li>
               </ul>
 	          </li>
+
+            
 	        </ul>
 
 	        <div class="footer">

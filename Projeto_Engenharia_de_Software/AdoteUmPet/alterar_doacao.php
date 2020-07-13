@@ -1,20 +1,21 @@
-<?php
+<?php  
 $server = "localhost";
 $username = "root";
 $password = "";
 $db = "unityacess";
 
 $nome = filter_input(INPUT_GET, "nome");
-$porte = filter_input(INPUT_GET, "porte");
-$descricao = filter_input(INPUT_GET, "descricao");
-$doença = filter_input(INPUT_GET, "doença");
-$vacinas = filter_input(INPUT_GET, "vacinas");
+$cpf = filter_input(INPUT_GET, "cpf");
+$endereco = filter_input(INPUT_GET, "endereco");
+$data_nascimento = filter_input(INPUT_GET, "data_nascimento");
+$email = filter_input(INPUT_GET, "email");
+$doacao = filter_input(INPUT_GET, "doacao");
 
 $connect = new mysqli($server, $username, $password, $db);
 if(!$connect){
     die("Connection Failed". mysqli_connect_error());
 }
-$sql = "UPDATE prontuario SET nome='$nome', porte='$porte', descricao='$descricao', doença='$doença', vacinas='$vacinas' WHERE porte='$_GET[porte]'";
+$sql = "UPDATE doacao SET nome='$nome', cpf='$cpf', endereco='$endereco', data_nascimento='$data_nascimento', email='$email', doacao='$doacao' WHERE cpf='$_GET[cpf]'";
 $result = mysqli_query($connect, $sql);
 if(!$result){
     echo"houve um erro";
