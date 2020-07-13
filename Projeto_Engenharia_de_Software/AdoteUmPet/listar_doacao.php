@@ -44,7 +44,9 @@ $result = mysqli_query($conn, $sql);
 						<td>Endereco</td>
 						<td>Data de nascimento</td>
 						<td>Email</td>
-            <td>Doacao</td>
+						<td>Doacao</td>
+						<td>Ação</td>
+				
 					</tr>
 				</thead>
 				<tbody>
@@ -55,7 +57,10 @@ $result = mysqli_query($conn, $sql);
 							<td><?php echo $dado["endereco"] ?></td>
 							<td><?php echo $dado["data_nascimento"] ?></td>
 							<td><?php echo $dado["email"] ?></td>
-              <td><?php echo $dado["doacao"] ?></td>
+							<td><?php echo $dado["doacao"] ?></td>
+							<td><a href="<?php echo "alterar_doacaoForm.php?cpf=" . $dado["cpf"] . "&nome=" . $dado["nome"] . "&endereco=" . $dado["endereco"] . "&data_nascimento=" . $dado["data_nascimento"] . "&email=" . $dado["email"] . "&doacao=" . $dado["doacao"] ?>">Editar | </a>
+									<a href="remover_doacao.php?cpf=<?php echo $dado["cpf"] ?>">Excluir</a></td>
+							  
 					</tr>
 					</tr>
 					<?php } ?>

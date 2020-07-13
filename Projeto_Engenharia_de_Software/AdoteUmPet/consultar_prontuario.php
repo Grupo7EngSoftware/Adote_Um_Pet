@@ -10,7 +10,7 @@ if(!$conn){
 }
 
 $pesquisar = $_POST["pesquisar"];
-$sql = "SELECT * FROM prontuario WHERE id LIKE '".$pesquisar."'";
+$sql = "SELECT * FROM prontuario WHERE porte LIKE '".$pesquisar."'";
 $result = mysqli_query($conn, $sql);
 ?>
 <head>
@@ -52,8 +52,8 @@ $result = mysqli_query($conn, $sql);
   							<td><?php echo $dado["descricao"] ?></td>
   							<td><?php echo $dado["doença"] ?></td>
   							<td><?php echo $dado["vacinas"] ?></td>
-                <td><a href="<?php echo "alterar_prontuarioForm.php?id=" . $dado["id"] . "&nome=" . $dado["nome"] . "&porte=" . $dado["porte"] . "&descricao=" . $dado["descricao"] . "&doença=" . $dado["doença"] . "&vacinas=" . $dado["vacinas"] ?>">Editar | </a>
-                    <a href="remover_prontuario.php?id=<?php echo $dado["id"] ?>">Excluir</a></td>
+                <td><a href="<?php echo "alterar_prontuarioForm.php?porte=" . $dado["porte"] . "&nome=" . $dado["nome"] . "&descricao=" . $dado["descricao"] . "&doença=" . $dado["doença"] . "&vacinas=" . $dado["vacinas"] ?>">Editar | </a>
+                    <a href="remover_prontuario.php?porte=<?php echo $dado["porte"] ?>">Excluir</a></td>
             </tr>
             <?php } }
                 else{

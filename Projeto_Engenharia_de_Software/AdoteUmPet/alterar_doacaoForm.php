@@ -11,11 +11,11 @@
         $endereco = filter_input(INPUT_GET,"endereco");
         $data_nascimento = filter_input(INPUT_GET,"data_nascimento");
         $email = filter_input(INPUT_GET,"email");
-        $senha = filter_input(INPUT_GET,"senha");
+        $doacao = filter_input(INPUT_GET,"doacao");
     ?>
 </head>
 
-<form class="form-horizontal" action="alterar_usuario.php">
+<form class="form-horizontal" action="alterar_doacao.php">
 <fieldset>
 
 <!-- Form Name -->
@@ -68,9 +68,9 @@
 </div>
 <!-- Password input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="senha">Senha</label>
+  <label class="col-md-4 control-label" for="doacao">Doação</label>
   <div class="col-md-4">
-    <input name="senha" type="password" placeholder="Entre com a Senha" class="form-control input-md" required="">
+    <input name="doacao" type="text" placeholder="O que você quer doar?" class="form-control input-md" required="" value="<?php echo $doacao?>">
 
   </div>
 </div>

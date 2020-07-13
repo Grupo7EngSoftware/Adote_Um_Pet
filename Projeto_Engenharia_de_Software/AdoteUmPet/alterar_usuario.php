@@ -25,6 +25,6 @@ else{
     echo"Alterado com sucesso";
 }
 ?>
-<form action="consultar_usuario.php">
+<form action="consultar_usuarioForms.php">
     <input type="submit" value="Pesquisar novamente">
 </form>

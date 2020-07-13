@@ -20,6 +20,6 @@ else{
 }
 
 ?>
-<form action="browse-users.php">
+<form action="tela_admin.php">
     <input type="submit" value="Voltar">
 </form>

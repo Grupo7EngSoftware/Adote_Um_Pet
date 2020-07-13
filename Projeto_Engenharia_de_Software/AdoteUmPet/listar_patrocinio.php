@@ -14,54 +14,52 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT * FROM prontuario";
+$sql = "SELECT * FROM patrocinio";
 $result = mysqli_query($conn, $sql);
 
 ?>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="https://demo.learncodeweb.com/favicon.ico">
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <?php require "sidebar.php"; ?>
 </head>
 <html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#" class="no-js">
-<head>
-</body>
+<body>
 	<div class="container">
 		<h1><a href="https://learncodeweb.com/php/php-crud-in-bootstrap-4-with-search-functionality/"></a></h1>
 		<div class="card">
-			<div class="card-header"><i class="fa fa-fw fa-globe"></i> <strong>Lista de prontuarios</strong> <a href="cadastrar_prontuarioForms.php?" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-plus-circle"></i> Adicionar prontuario</a></div>
+			<div class="card-header"><i class="fa fa-fw fa-globe"></i> <strong>Lista de patrocinios</strong> <a href="cadastrar_patrocinioForm.php?" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-plus-circle"></i> Adicionar patrocínio</a></div>
 			<div class="card-body">
 		</div>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 
 		<div>
 			<table class="table table-striped table-bordered">
 				<thead>
 					<tr class="bg-primary text-white">
-            <td>Id</>
-            <td>Nome</>
-						<td>Porte</td>
-						<td>Descricao</td>
-						<td>Doença</td>
-						<td>Vacinas</td>
+						
+						<td>Nome</>
+						<td>CNPJ</td>
+                        <td>Endereco</td>
+                        <td>Email</td>
+						<td>Logo</td>
 						<td>Ação</td>
 					</tr>
 				</thead>
 				<tbody>
 					<?php while($dado = $result->fetch_array()){ ?>
 					<tr>
-              <td><?php echo $dado["id"] ?></td>
-              <td><?php echo $dado["nome"] ?></td>
-							<td><?php echo $dado["porte"] ?></td>
-							<td><?php echo $dado["descricao"] ?></td>
-							<td><?php echo $dado["doença"] ?></td>
-							<td><?php echo $dado["vacinas"] ?></td>
-							<td><a href="<?php echo "alterar_prontuarioForm.php?porte=" . $dado["porte"] . "&nome=" . $dado["nome"] . "&descricao=" . $dado["descricao"] . "&doença=" . $dado["doença"] . "&vacinas=" . $dado["vacinas"] ?>">Editar | </a>
-									<a href="remover_prontuario.php?porte=<?php echo $dado["porte"] ?>">Excluir</a></td>
+              				<td><?php echo $dado["nome"] ?></td>
+							<td><?php echo $dado["cnpj"] ?></td>
+                            <td><?php echo $dado["endereco"] ?></td>
+                            <td><?php echo $dado["email"] ?></td>
+              				<td><img src="<?php echo "./ImagensPatrocinio/".$dado["logo"]?>"width="260" height="200"/></td>
+							<td><a href="<?php echo "alterar_patrocinioForm.php?cnpj=" . $dado["cnpj"] . "&nome=" . $dado["nome"] . "&endereco=" . $dado["endereco"] . "&email=". $dado["email"] . "&logo=" . $dado["logo"] ?>">Editar | </a>
+									<a href="remover_patrocinio.php?cnpj=<?php echo $dado["cnpj"] ?>">Excluir</a></td>
+					</tr>
 					</tr>
 					<?php } ?>
 				</tbody>
@@ -82,5 +80,4 @@ $result = mysqli_query($conn, $sql);
 	    <input type="submit" value="Voltar">
 	</form>
 </body>
-</head>
 </html>
